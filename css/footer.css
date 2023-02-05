@@ -1,0 +1,334 @@
+.footer {
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 140px;
+    margin-top: -60px;
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(transparent, #000000);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.foo_content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    color: var(--bs-gray-300);
+    line-height: 2em;
+    overflow: hidden;
+}
+
+.part_foo_one {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+.contain_one,
+.contain_two {
+    font-family: "Mabry-Pro-Bold";
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.contain_one>span {
+    position: relative;
+}
+
+.contain_one .part_foo {
+    position: relative;
+    white-space: nowrap;
+    padding-bottom: 20px;
+}
+
+.part_foo>p {
+    display: inline-block;
+    position: relative;
+}
+
+.part_foo p:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--bs-gray-500);
+    opacity: .5;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.part_foo>p:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.contain_one>span>li>p,
+.contain_two>li>p {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contain_one>span>li>p>a,
+.contain_two>li>p>a {
+    color: #fff;
+}
+
+.contact_gmail {
+    margin-top: 100px;
+    margin-bottom: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contact_gmail p {
+    display: block;
+    font-family: "Mabry-Pro-Light";
+    text-transform: capitalize;
+    font-size: 30px;
+    width: 40%;
+}
+
+.contact_gmail p strong {
+    display: block;
+    font-size: 30px;
+}
+
+.contact_gmail form {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 60%;
+}
+
+.contact_gmail form input {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: block;
+    width: 100%;
+    appearance: none;
+    font-size: inherit;
+    line-height: inherit;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    padding-bottom: 20px;
+    line-height: 1.5;
+    font-size: 13px;
+    width: calc(100% - 40px);
+    font-family: MabryPro Regular,
+        sans-serif;
+    color: white;
+    border-bottom: 1px solid var(--bs-gray-200);
+}
+
+.contact_gmail form input::placeholder {
+    color: var(--bs-gray-200);
+}
+
+.contact_gmail form button {
+    visibility: hidden;
+}
+
+canvas {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+    z-index: -1;
+}
+
+
+.footer_copyright {
+    clear: inline-start;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--bs-gray-500);
+}
+
+.footer_copyright strong {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .footer {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+        padding-top: 145px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .contain_one,
+    .contain_two {
+        display: none;
+    }
+
+    .logo_primodial {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .logo_primodial p {
+        font-family: 'tan_perl' !important;
+        font-size: clamp(16px, 2vw, 30px);
+
+    }
+
+    .contact_gmail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .contact_gmail p {
+        font-size: 20px !important;
+    }
+
+    .contact_gmail form {
+        width: 100% !important;
+        margin-top: 40px !important;
+    }
+
+    .contact_gmail form input {
+        width: 100% !important;
+    }
+
+    .contact_gmail p strong {
+        display: block;
+        font-size: 20px;
+    }
+
+    .footer_copyright {
+        bottom: 0px !important;
+    }
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .width_height_foo {
+        width: 190px
+    }
+
+    :is(.contain_one, .contain_two) {
+        display: none;
+    }
+
+    .contact_gmail {
+        display: block;
+    }
+
+    .contact_gmail>p,
+    strong {
+        font-size: 20px;
+    }
+
+    .contact_gmail form {
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        width: 100%;
+    }
+
+    .logo_primodial {
+        margin: 0 auto;
+    }
+
+    .footer_copyright {
+        display: none;
+    }
+
+    .contact_gmail {
+        margin-top: 100px;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .side_panel_menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .panel_menu {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .center_icon_media {
+        margin: 0 auto;
+
+    }
+
+    .menu_li {
+        margin-left: 0;
+    }
+
+
+    .icon_my_social_media {
+        margin-top: 0;
+    }
+
+    :is(.studies_case > .menu_li, .more_menu>.more_li) {
+        font-size: 13px;
+    }
+
+    :is(.facebook>svg,
+        .instagram>svg,
+        .linkedin>svg,
+        .github>svg,
+        .medium>svg) {
+        width: 100%;
+        height: 18px;
+        transition: opacity 0.4s ease-out 0s;
+    }
+
+    .text-copyright span p,
+    .text-copyright span p strong {
+        font-size: 10px;
+        text-transform: capitalize;
+        color: var(--bs-gray-600);
+        font-family: 'Mabry-Pro-light';
+    }
+}

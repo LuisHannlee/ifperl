@@ -1,0 +1,933 @@
+@import url(pan_perl.css);
+@import url(mabrypro.css);
+@import url(cambon.css);
+@import url(navbar.css);
+@import url(footer.css);
+
+/* navbar */
+
+.this_select a {
+    color: #000;
+
+}
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: #e6e6e6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    transition: all .5s;
+}
+
+#loader img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+:root {
+    /* ? ==============font size============== */
+    /* !font windows default */
+    --o-windows-s: 16px;
+    --o-windows-l: 18px;
+    --o-windows-x: 19px;
+    --o-windows-xs: 20px;
+    --o-windows-xl: 21px;
+    --o-windows-xx: 23px;
+
+    /* ? ===============colors============= */
+    --black: #212529;
+    --white: ##ced4da;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --shadow: rgb(0 0 0 / 6%) 0px 3px 20px 5px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: var(--bs-gray-300);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bs-gray-500);
+    border-radius: 70px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: #343a40;
+    color: var(--bs-gray-400);
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-size: var(--o-windows-s);
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    background: rgb(255, 255, 255);
+    font-weight: normal;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.word_about,
+.p_contain_about {
+    overflow: hidden;
+}
+
+.word_about>h1,
+.p_contain_about>span {
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+.section_about_page {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 140px;
+}
+
+.about_page_one {
+    position: relative;
+    min-width: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 760px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.eyes,
+.mouth {
+    position: absolute;
+    z-index: 2;
+    max-width: 400px;
+    z-index: -1;
+
+}
+
+.eyes {
+    right: 0;
+    top: 30px;
+}
+
+.mouth {
+    left: 0;
+    bottom: 0;
+}
+
+.eyes img,
+.mouth img {
+    width: 80%;
+}
+
+
+.about_page_one .word_about {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.about_page_one .word_about h1 {
+    color: #000000;
+    min-width: 0;
+    min-height: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "tan_perl";
+    font-size: 80px;
+}
+
+.paragraph_about_page {
+    min-width: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: 180px;
+}
+
+.plf {
+    margin: 0 auto;
+    text-align: center;
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+    box-sizing: border-box;
+    font-family: "cambon";
+    font-weight: lighter;
+    font-size: 40px;
+    overflow: hidden;
+    color: #000000;
+}
+
+.plf strong {
+    font-family: "mabry-pro-bold";
+    font-size: 40px;
+    color: #000000;
+}
+
+.dark_about_page {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    margin-top: 0;
+    background-color: #000;
+}
+
+.div_about_image {
+    width: 80%;
+    margin-top: 0;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -60px;
+}
+
+.lazy_load {
+    display: block;
+    position: relative;
+}
+
+.lazy_load .face_3 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    height: auto;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: #000;
+}
+
+.empty_about {
+    padding-top: 38.2292%;
+    width: 100%;
+    min-width: 0;
+    background-color: initial;
+    box-sizing: border-box;
+
+}
+
+.about_me_resume {
+    max-width: 560px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    margin-top: 140px;
+}
+
+.about_me_resume .title_resume {
+    text-align: center;
+    width: 100%;
+
+}
+
+.title_resume span p {
+    text-transform: uppercase;
+    font-family: "tan_perl";
+    font-size: 60px;
+    color: var(--bs-gray-100);
+}
+
+.text_about {
+    box-sizing: border-box;
+    margin: 40px 0px 0px;
+    min-width: 0px;
+    text-align: left;
+    z-index: 1;
+    position: relative;
+}
+
+.text_about .content_text_about {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.9;
+    font-family: "Mabry-Pro-light", sans-serif;
+}
+
+.text_about .content_text_about p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.content_text_about p:not(:first-of-type) {
+    margin-top: 2.5em;
+}
+
+.about_pyramid {
+    margin-top: 0px;
+    width: auto;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 260px;
+}
+
+.contain_pyramid {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    transform: translate3d(0, 180px, 0);
+}
+
+.contain_text_pyramid {
+    transform: translate3d(-50%, -40px, 0);
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+
+}
+
+.text_pyramid {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-family: "Mabry-Pro", sans-serif;
+    line-height: 1;
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+}
+
+.text_pyramid p strong {
+    color: var(--bs-gray-100);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.lazy_load .schema {
+    box-sizing: border-box;
+    margin: 0px auto;
+    min-width: 0px;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.empty_schema {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    padding-top: 80.7692%;
+    width: 100%;
+    background-color: initial;
+}
+
+.program_about_page {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    text-align: left;
+    transform: translate3d(calc(-100% - 20px), 15px, 0);
+}
+
+.content_text_program {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-family: "Mabry-Pro", sans-serif;
+    line-height: 1.5;
+    color: #000;
+    text-align: left;
+    bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.editing_about_page {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    text-align: left;
+    transform: translate3d(calc(100% + 20px), 15px, 0);
+}
+
+.content_text_editing {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-family: "Mabry-Pro", sans-serif;
+    line-height: 1.5;
+    color: #000;
+    text-align: left;
+    bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.made_about_page {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 180px;
+    min-width: 0;
+
+}
+
+.content_made_about {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    min-width: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.space_content_made {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 0;
+    width: 100%;
+    margin-top: 300px;
+}
+
+.title_made_about {
+    color: #000000;
+    margin: 0 auto;
+    font-size: 60px;
+    font-family: "tan_perl", sans-serif;
+    min-width: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text_made {
+    margin-top: 50px;
+    margin-bottom: 120px;
+    width: calc(100% - 40px);
+    text-align: left;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+}
+
+.text_made_content {
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: "Mabry-Pro-light", sans-serif;
+}
+
+.text_made_content p:not(:first-of-type) {
+    margin-top: 1.5em;
+}
+
+
+@media screen and (min-width:1200px) {
+    .about_page_one {
+        margin-top: 40px !important;
+    }
+
+    .title_made_about {
+        font-size: 60px !important;
+    }
+
+    .about_page_one .word_about h1 {
+        font-size: 80px !important;
+        line-height: 1.3;
+    }
+
+    .plf {
+        font-size: 40px !important;
+    }
+
+    .plf strong {
+        font-size: 40px !important;
+    }
+
+    .div_about_image {
+        margin-top: -60px !important;
+    }
+
+    .about_me_resume {
+        margin-top: 100px !important;
+    }
+
+    .title_resume span p {
+        font-size: 60px !important;
+    }
+
+    .text_about .content_text_about p {
+        font-size: 20px !important;
+        line-height: 1.9;
+    }
+
+    .space_content_made {
+        margin-top: 300px !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about_page_one {
+        margin-top: 40px;
+    }
+
+    .text_about .content_text_about p {
+        font-size: 20px !important;
+        line-height: 1.9;
+    }
+
+    .title_made_about {
+        font-size: 60px !important;
+    }
+
+    .about_page_one .word_about h1 {
+        font-size: 50px;
+        line-height: 1.3;
+    }
+
+    .title_resume span p {
+        font-size: 60px !important;
+    }
+
+    .plf {
+        font-size: 40px !important;
+    }
+
+    .plf strong {
+        font-size: 40px !important;
+    }
+
+    .space_content_made {
+        margin-top: 300px;
+    }
+
+    .content_text_program {
+        font-size: 15px !important;
+    }
+
+    .content_text_editing {
+        font-size: 15px !important;
+    }
+
+    .contain_text_pyramid {
+        font-size: 15px !important;
+    }
+
+
+
+    .contain_text_pyramid {
+        transform: translate3d(-50%, -40px, 0) !important;
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+
+    }
+
+    .text_pyramid {
+        line-height: 1.2;
+        font-size: 18px !important;
+    }
+
+    .program_about_page {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        position: absolute;
+        left: 0;
+        bottom: 20px !important;
+        text-align: left !important;
+        transform: translate3d(calc(-100% - 20px), 15px, 0) !important;
+    }
+
+    .editing_about_page {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        position: absolute;
+        right: 0;
+        bottom: 20px !important;
+        text-align: left !important;
+        transform: translate3d(calc(100% + 20px), 15px, 0) !important;
+    }
+
+    .text_made_content {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        color: #000;
+        font-size: 20px !important;
+        line-height: 1.9;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about_page_one {
+        margin-top: 40px;
+    }
+
+    .about_page_one .word_about h1 {
+        font-size: 40px;
+        line-height: 1.3;
+    }
+
+    .title_made_about {
+        font-size: 40px;
+    }
+
+    .paragraph_about_page {
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+
+    .plf {
+        font-size: 25px;
+    }
+
+    .plf strong {
+        font-size: 25px;
+    }
+
+    .div_about_image {
+        margin-top: -30px;
+    }
+
+    .about_me_resume {
+        margin-top: 100px;
+    }
+
+    .title_resume span p {
+        font-size: 40px;
+    }
+
+    .text_about .content_text_about p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .section_about_page {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translate3d(-50%, -45px, 0px);
+    }
+
+    .text_pyramid {
+        line-height: 1;
+        font-size: 12px;
+    }
+
+    .program_about_page {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        position: absolute;
+        left: 0px;
+        bottom: 20px;
+        text-align: left;
+        transform: translate3d(0px, calc(100% + 20px), 0px);
+        color: rgb(0, 0, 0);
+    }
+
+    .content_text_program {
+        text-align: left;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+
+    .editing_about_page {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        position: absolute;
+        right: 0px;
+        bottom: 20px;
+        text-align: right;
+        transform: translate3d(0px, calc(100% + 20px), 0px);
+        color: rgb(0, 0, 0);
+    }
+
+    .content_text_editing {
+        text-align: right;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+
+    .space_content_made {
+        margin: calc(30vw + 80px) 0px 0px;
+    }
+
+
+
+    .text_made {
+        box-sizing: border-box;
+        min-width: 0px;
+        text-align: left;
+        color: rgb(0, 0, 0);
+        margin: 40px auto 80px;
+        width: 90%;
+    }
+
+    .text_made_content {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        color: #000;
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .made_about_page {
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        min-width: 0;
+    }
+}
+
+@media (min-width: 0px) and (max-width:768px) {
+    .this_select a {
+        color: var(--bs-gray-300);
+
+    }
+
+    .text_pyramid {
+        line-height: 0.9;
+    }
+
+    .contain_text_pyramid {
+        transform: translate3d(-50%, -50px, 0);
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+    }
+
+    .eyes,
+    .mouth {
+        position: absolute;
+        z-index: 2;
+        max-width: 100px;
+        z-index: -1;
+
+    }
+
+    .about_page_one {
+        margin-top: 40px;
+    }
+
+    .about_page_one .word_about h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .paragraph_about_page {
+        max-width: 95%;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+
+    .plf {
+        font-size: 20px;
+    }
+
+    .plf strong {
+        font-size: 20px;
+    }
+
+    .div_about_image {
+        margin-top: -30px;
+    }
+
+    .about_me_resume {
+        margin-top: 100px;
+    }
+
+    .title_resume span p {
+        font-size: 30px;
+    }
+
+    .text_about .content_text_about p {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .section_about_page {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translate3d(-50%, -45px, 0px);
+    }
+
+    .contact_gmail>p,
+    strong {
+        font-size: 12px;
+    }
+
+    .contain_pyramid {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        position: relative;
+        transform: translate3d(0px, calc(50% - 20px), 0px);
+    }
+
+    .program_about_page {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        position: absolute;
+        left: 0px;
+        bottom: 20px;
+        text-align: left;
+        transform: translate3d(0px, calc(100% + 20px), 0px);
+        color: rgb(0, 0, 0);
+    }
+
+    .content_text_program {
+        text-align: left;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+
+    .editing_about_page {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        position: absolute;
+        right: 0px;
+        bottom: 20px;
+        text-align: right;
+        transform: translate3d(0px, calc(100% + 20px), 0px);
+        color: rgb(0, 0, 0);
+    }
+
+    .content_text_editing {
+        text-align: right;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+
+    .space_content_made {
+        margin: calc(30vw + 80px) 0px 0px;
+    }
+
+    .title_made_about {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .text_made {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        text-align: left;
+        color: #000;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .text_made_content {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        color: #000;
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .made_about_page {
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        min-width: 0;
+    }
+
+}

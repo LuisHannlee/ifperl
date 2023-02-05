@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="google" content="notranslate" value="notranslate" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Primodial</title>
+    <link
+      rel="icon"
+      href="asset/iconify.png"
+      type="image/x-icon"
+      style="background-color: transparent"
+    />
+    <link rel="stylesheet" href="css/about.css" />
+    <script src="../js/about.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.146.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="../js/gsap_an.js" defer></script>
+  </head>
+  <body onload="sizeW()" onresize="sizeW()">
+    <div id="loader">
+      <img src="images/pi.gif" rel="preload" alt="" srcset="" />
+    </div>
+    <header-prototype></header-prototype>
+    <section class="section_about_page">
+      <div class="about_page_one">
+        <div class="eyes">
+          <img src="images/eyes.png" alt="" />
+        </div>
+        <div class="mouth">
+          <img src="images/mouth.png" alt="" />
+        </div>
+        <div class="word_about">
+          <h1>at the edge</h1>
+        </div>
+        <div class="word_about">
+          <h1>of art,</h1>
+        </div>
+        <div class="word_about">
+          <h1>design and</h1>
+        </div>
+        <div class="word_about">
+          <h1>technology</h1>
+        </div>
+      </div>
+      <div class="paragraph_about_page">
+        <h1 class="plf">
+          <div class="p_contain_about">
+            <span>I'am a so enthusiastic person and</span>
+          </div>
+          <div class="p_contain_about">
+            <span><strong>passionate</strong> who together build</span>
+          </div>
+          <div class="p_contain_about">
+            <span>multimedia entertainment and experiences</span>
+          </div>
+          <div class="p_contain_about">
+            <span>with a <strong>strong creative identity.</strong> </span>
+          </div>
+        </h1>
+      </div>
+      <div class="dark_about_page">
+        <div class="div_about_image">
+          <div class="lazy_load">
+            <img class="face_3" src="images/3 face.webp" alt="" />
+            <div class="empty_about"></div>
+          </div>
+        </div>
+        <div class="about_me_resume">
+          <h1 class="title_resume">
+            <span
+              ><p>
+                an individual <br />
+                learner
+              </p>
+            </span>
+          </h1>
+          <div class="text_about">
+            <div class="content_text_about">
+              <p>
+                Hello i am Arief, i am not an experienced expert i am a learner.
+                learn new things and do case studies when i finish them. I like
+                new things and challenges that I have never experienced before
+                and put people first.
+              </p>
+              <p>
+                I learned about technology from accounting with Microsoft office
+                and Google Sheets, Programming with Javascript and React.Js
+                programming languages, and photo Editing with Photoshop, Canvas.
+                I attach some case studies to the project section.
+              </p>
+            </div>
+          </div>
+          <div class="about_pyramid">
+            <div class="contain_pyramid">
+              <div class="contain_text_pyramid">
+                <div class="text_pyramid">
+                  <p>
+                    <strong>accounting</strong> <br />
+                    <strong>Google Sheets & Microsoft office</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="lazy_load">
+                <img class="schema" src="images/schema_about_@x2.png" alt="" />
+                <div class="empty_schema"></div>
+              </div>
+              <div class="program_about_page">
+                <div class="content_text_program">
+                  <p>
+                    <strong>programming</strong> <br />
+                    <strong>javascript & HTML</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="editing_about_page">
+                <div class="content_text_editing">
+                  <p>
+                    <strong>editing</strong> <br />
+                    <strong>photoshop & corelDraw</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="made_about_page">
+        <div class="content_made_about">
+          <div class="space_content_made">
+            <h2 class="title_made_about">
+              <span>
+                <p>
+                  basic principle <br />
+                  of work
+                </p>
+              </span>
+            </h2>
+            <div class="text_made">
+              <div class="text_made_content">
+                <p>
+                  All my projects are made with full awareness and that puts
+                  people first. Do it with passion and tenacity..
+                </p>
+                <p>
+                  Learning a lot of things in a fairly short time is a difficult
+                  thing. I'm not the expert but I keep improving my skills and
+                  give the best I can and I have to be able.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer-prototype></footer-prototype>
+    </section>
+  </body>
+  <script src="asset/footer.js"></script>
+  <script src="asset/navigation_bar.js"></script>
+  <script>
+    let loader = document.querySelector("#loader");
+    window.addEventListener("load", function () {
+      loader.style.height = "100px";
+      loader.style.width = "100px";
+      loader.style.visibility = "hidden";
+    });
+  </script>
+</html>

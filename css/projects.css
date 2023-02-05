@@ -1,0 +1,1118 @@
+@import url(pan_perl.css);
+@import url(cambon.css);
+@import url(mabrypro.css);
+@import url(navbar.css);
+@import url(footer.css);
+
+:root {
+    /* ? ==============font size============== */
+    /* !font windows default */
+    --o-windows-s: 16px;
+    --o-windows-l: 18px;
+    --o-windows-x: 19px;
+    --o-windows-xs: 20px;
+    --o-windows-xl: 21px;
+    --o-windows-xx: 23px;
+
+    /* ? ===============colors============= */
+    --black: #212529;
+    --white: ##ced4da;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --shadow: rgb(0 0 0 / 6%) 0px 3px 20px 5px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: var(--bs-gray-300);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bs-gray-500);
+    border-radius: 70px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+::selection {
+    background-color: #343a40;
+    color: var(--bs-gray-400);
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-size: var(--o-windows-s);
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    background: rgb(255, 255, 255);
+    font-weight: normal;
+    position: relative;
+}
+
+
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: #e6e6e6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    transition: all .5s;
+}
+
+#loader img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text_play_project,
+.contain_link_project,
+.save_a {
+    overflow: hidden;
+}
+
+.text_play_project>p,
+.contain_link_project>p,
+.link_name_project {
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+.underline_front {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff !important;
+    opacity: 0.35;
+}
+
+.section_projects_page {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+.studies_case_page {
+    height: calc(100vh - 2vh);
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    background-color: #0e0d0d;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.control_center_project {
+    display: block;
+    padding-top: 220px;
+    z-index: 3;
+}
+
+.content_studies_page {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    z-index: 1;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.title_page_project {
+    line-height: 1.5;
+    font-size: 60px;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "tan_perl", serif;
+}
+
+.unorder_list_dynamic {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 160px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+
+.contain_link_project {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-family: "Mabry-Pro-light", serif;
+    margin: 0;
+    min-width: 0;
+}
+
+.list_link_projects {
+    display: flex;
+    margin: 40px auto 0;
+    justify-content: center;
+}
+
+.css_lp,
+.css_lp a {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Mabry-Pro";
+}
+
+
+.join_lp {
+    display: flex;
+}
+
+.save_a {
+    position: relative;
+}
+
+.slash {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* grid img */
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 5em);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.grid {
+    pointer-events: none;
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    display: grid;
+    grid-template-columns: repeat(50, 2%);
+    grid-template-rows: repeat(50, 2%);
+}
+
+.grid__item {
+    position: relative;
+}
+
+.grid--img .grid__item {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+}
+
+.grid__item-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.grid--img .grid__item-img {
+    flex: none;
+    width: calc(100% + 100px);
+    height: calc(100% + 100px);
+    will-change: transform;
+}
+
+/* Shorthand grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+
+.pos-1 {
+    grid-area: 10 / 1 / 26 / 7;
+}
+
+.pos-2 {
+    grid-area: 1 / 18 / 9 / 27;
+}
+
+.pos-3 {
+    grid-area: 1 / 36 / 14 / 42;
+}
+
+.pos-4 {
+    grid-area: 13 / 11 / 32 / 18;
+}
+
+.pos-5 {
+    grid-area: 17 / 32 / 32 / 38;
+}
+
+.pos-6 {
+    grid-area: 20 / 46 / 28 / 51;
+}
+
+.pos-7 {
+    grid-area: 43 / 1 / 51 / 10;
+}
+
+.pos-8 {
+    grid-area: 38 / 14 / 46 / 22;
+}
+
+.pos-9 {
+    grid-area: 40 / 26 / 51 / 32;
+}
+
+.pos-10 {
+    grid-area: 37 / 39 / 48 / 47;
+}
+
+/* galry foto */
+.list_project_important {
+    width: calc(100% - 120px);
+    max-width: 1440px;
+    margin-top: -120px;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+
+}
+
+.list_item_project_45 {
+    margin-top: 120px;
+    width: 45%;
+    box-sizing: border-box;
+    min-width: 0;
+    position: relative;
+}
+
+.list_item_project_45 a {
+    text-decoration: none;
+    color: inherit;
+    font-style: normal;
+    position: relative;
+}
+
+.list_item_project_45 .lazy_load {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+
+.css_role_project {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    position: relative;
+    transition: ease-in 1s;
+    will-change: clip-path;
+    z-index: 1;
+    clip-path: inset(0px);
+    width: 100%;
+}
+
+.css-vuvuku {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+
+}
+
+.css-vuvuku .css-future_project {
+    display: block;
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    opacity: 1;
+    transition: transform 0.75s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+.empty-project {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    padding-top: 100%;
+    width: 100%;
+    background-color: initial;
+}
+
+.css-text-project-item {
+    margin-top: 55px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.css-title-project-item {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    max-width: 90%;
+}
+
+.css-h2-title-project {
+    font-family: 'tan_perl';
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 40px !important;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.css-15owl46 {
+    display: block;
+    position: relative;
+    min-width: 0;
+    max-width: 90%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.css-1t61dnh {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Mabry-Pro-bold", serif;
+    color: #000;
+}
+
+.css-1xou83z {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Mabry-Pro-light', sans-serif;
+    color: #000;
+    margin-top: 5px;
+}
+
+.css_role_project:hover {
+    transition: ease-in 1s;
+    transform: scale(0.95);
+}
+
+.list_item_project_100 {
+    margin-top: 120px;
+    width: 100%;
+}
+
+.empty-project_100 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    padding-top: 45%;
+    width: 100%;
+    background-color: initial;
+}
+
+.division_change {
+    height: 100vh;
+}
+
+
+
+.css-9k2q6r {
+    box-sizing: border-box;
+    min-width: 0px;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1100px;
+    margin: 200px auto 100px;
+    width: 80%;
+    color: rgb(0, 0, 0);
+    display: flex;
+}
+
+.css-1kgz9v2 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    position: absolute;
+    opacity: 0.3;
+    top: -150px;
+    left: 50%;
+    transform: translate3d(-50%, 0px, 0px);
+    display: block;
+    background-color: rgb(0, 0, 0);
+    width: 1px;
+    height: 100px;
+}
+
+.css-1pqiuo8 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-size: 30px;
+    line-height: 1.5;
+    font-family: "cambon",
+        serif;
+    text-align: center;
+}
+
+.css-1pqiuo8 strong {
+    font-family: "Mabry-Pro-bold", sans-serif;
+    font-weight: normal;
+}
+
+.css-1hwlx6m {
+    box-sizing: border-box;
+    margin: 30px 0px 0px;
+    min-width: 0px;
+    text-align: center;
+    align-self: center;
+    max-width: calc(100% + 100px);
+    font-size: 20px;
+    line-height: 1.3333;
+    font-family: "Mabry-Pro-light", serif;
+}
+
+.links_project {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 200px;
+}
+
+.controls_under {
+    position: relative;
+    z-index: -1;
+}
+
+.link_hm h4 {
+    font-family: 'Mabry-Pro-Bold';
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.second_layer_2 {
+    margin: 0;
+    min-width: 0;
+    display: initial;
+    box-sizing: content-box;
+    position: relative;
+    width: 22px;
+    height: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    margin-top: -0.5em;
+}
+
+
+.thrid_layer_2 {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+}
+
+
+.thrid_layer_2::before {
+    left: 0;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    content: "";
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    background-color: #000;
+}
+
+.thrid_layer_2::after {
+    right: -12px;
+    top: 41.988888%;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 4px solid;
+    border-left-color: #000;
+}
+
+
+.core_circle_2 {
+    position: relative;
+    top: -140%;
+    left: 20px;
+    box-sizing: border-box;
+    margin: 0px auto;
+    min-width: 0px;
+    border: 1px solid var(--bs-gray-800);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.3;
+    transition: none 0s ease 0s;
+    transform: translate3d(0px, 0px, 0px) scale(1.2);
+    width: 60px;
+    height: 60px;
+    z-index: 9;
+}
+
+.underline_front {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    opacity: 0.35;
+}
+
+
+
+@media screen and (min-width:1024px) {
+    .control_center_project {
+        padding-top: 220px !important;
+    }
+
+    .studies_case_page {
+        height: 100%;
+
+    }
+
+    .title_page_project {
+        font-size: 60px !important;
+        line-height: 1.5;
+    }
+
+    .unorder_list_dynamic {
+        width: 100%;
+        margin-top: 90px !important;
+        margin-bottom: 180px !important;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        text-align: center;
+    }
+
+    .contain_link_project {
+        font-size: 20px;
+        line-height: 1.5;
+        color: #ffffff;
+        font-family: "Mabry-Pro-light", serif;
+        margin: 0;
+        min-width: 0;
+    }
+
+    .list_link_projects {
+        display: flex !important;
+        margin: 40px auto 0 !important;
+        justify-content: center !important;
+        flex-direction: row !important;
+    }
+
+    .css_lp,
+    .css_lp a {
+        color: #ffffff;
+        font-size: 20px !important;
+        font-family: "Mabry-Pro-bold";
+    }
+
+
+    .join_lp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .save_a {
+        position: relative;
+    }
+
+    .slash {
+        margin-left: 30px;
+        margin-right: 30px;
+        display: flex !important;
+    }
+
+    .list_link_projects {
+        margin-top: 40px;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .save_a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .slash {
+        display: none;
+    }
+
+    .contain_link_project,
+    .css_lp a {
+        font-size: 20px !important;
+        line-height: 1.5;
+    }
+
+    .css-h2-title-project {
+        font-weight: 40px;
+    }
+
+    .css-1t61dnh {
+        font-size: 25px !important;
+    }
+
+    .css-1xou83z {
+        font-size: 20px !important;
+    }
+
+    .css-15owl46 {
+        display: block;
+        position: relative;
+        min-width: 0;
+        max-width: 90%;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    .list_project_important {
+        width: calc(100% - 120px) !important;
+        max-width: 1440px !important;
+        margin-top: -120px !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        list-style: none !important;
+        flex-wrap: wrap !important;
+        margin-bottom: 200px !important;
+    }
+
+    .list_item_project_45 {
+        margin-top: 120px;
+        width: 45% !important;
+        box-sizing: border-box;
+        min-width: 0;
+        position: relative;
+    }
+
+    .list_item_project_100 {
+        margin-top: 120px;
+        width: 100% !important;
+        box-sizing: border-box;
+        min-width: 0;
+        position: relative;
+    }
+
+    .empty-project_100 {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        padding-top: 45% !important;
+        width: 100%;
+        background-color: initial;
+    }
+
+    .css-text-project-item {
+        margin-top: 55px !important;
+    }
+
+    .css-9k2q6r {
+        margin-top: 320px !important;
+        margin-bottom: 200px !important;
+        width: 80% !important;
+    }
+
+    .css-1kgz9v2 {
+        height: 160px !important;
+        top: -230px !important;
+    }
+
+    .css-1pqiuo8 {
+        font-size: 40px !important;
+    }
+
+    .css-1hwlx6m {
+        margin-top: 60px !important;
+        font-size: 30px !important;
+    }
+
+    .links_project {
+        margin-top: 80px !important;
+    }
+
+    .link_hm h4 {
+        font-family: 'Mabry-Pro-Bold';
+        text-transform: uppercase;
+        font-size: 16px !important;
+        padding-bottom: 5px;
+    }
+
+    .core_circle_2 {
+        height: 60px !important;
+        width: 60px !important;
+        top: -30px !important;
+    }
+
+    .list_item_project_45:first-child {
+        transform: translateY(0px) !important;
+
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .control_center_project {
+        padding-top: 130px;
+    }
+
+    .studies_case_page {
+        height: 100%;
+
+    }
+
+    .title_page_project {
+        font-size: 40px;
+        line-height: 1.5;
+    }
+
+    .unorder_list_dynamic {
+        width: 100%;
+        margin-bottom: 120px;
+        margin-top: 50px;
+    }
+
+    .list_link_projects {
+        margin-top: 40px;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .save_a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .slash {
+        display: none;
+    }
+
+    .contain_link_project,
+    .css_lp a {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .css-h2-title-project {
+        font-size: 20px;
+    }
+
+    .css-1t61dnh {
+        font-size: 18px;
+    }
+
+    .css-1xou83z {
+        font-size: 15px;
+    }
+
+    .css-15owl46 {
+        display: block;
+        position: relative;
+        min-width: 0;
+        max-width: 90%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+    .css-text-project-item {
+        margin-top: 30px;
+    }
+
+    .list_project_important {
+        width: 80%;
+        max-width: 700px;
+        margin-top: -60px;
+        box-sizing: border-box;
+        margin: -60px auto 0px;
+        min-width: 0px;
+        max-width: 700px;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .list_item_project_45 {
+        margin-top: 30px;
+        width: 100%;
+        box-sizing: border-box;
+        min-width: 0px;
+    }
+
+    .list_item_project_100 {
+        margin-top: 60px !important;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+    }
+
+    .empty-project_100 {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        padding-top: 100%;
+        width: 100%;
+        background-color: initial;
+    }
+
+    .css-9k2q6r {
+        margin-top: 200px;
+        margin-bottom: 100px;
+        width: 80%;
+    }
+
+    .css-1kgz9v2 {
+        height: 100px;
+    }
+
+    .css-1pqiuo8 {
+        font-size: 25px;
+    }
+
+    .css-1hwlx6m {
+        font-size: 18px;
+    }
+
+    .links_project {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .link_hm h4 {
+        font-family: 'Mabry-Pro-Bold';
+        text-transform: uppercase;
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+
+    .core_circle_2 {
+        height: 40px;
+        width: 40px;
+        top: -20px;
+    }
+}
+
+@media (min-width:0px) and (max-width:768px) {
+    .control_center_project {
+        padding-top: 130px;
+    }
+
+    .studies_case_page {
+        height: 100%;
+    }
+
+    .title_page_project {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .unorder_list_dynamic {
+        width: 100%;
+        margin: 50px auto 160px;
+    }
+
+    .list_link_projects {
+        margin-top: 15px;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .save_a {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .slash {
+        display: none;
+    }
+
+    .contain_link_project {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .css_lp a {
+        font-size: 13px;
+    }
+
+    .css-h2-title-project {
+        font-size: 18px !important;
+    }
+
+    .css-1t61dnh {
+        font-size: 15px;
+    }
+
+    .css-1xou83z {
+        font-size: 13px;
+    }
+
+    .css-15owl46 {
+        display: block;
+        position: relative;
+        min-width: 0;
+        max-width: 90%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+    .css-text-project-item {
+        margin-top: 30px;
+    }
+
+    .list_project_important {
+        width: 90%;
+        max-width: 700px;
+        margin-top: -120px;
+        box-sizing: border-box;
+        margin: -120px auto 0px;
+        min-width: 0px;
+        max-width: 700px;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        display: flex;
+        z-index: 5;
+    }
+
+    .list_item_project_45 {
+        margin-top: 60px !important;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 60px 0px 0px;
+        min-width: 0px;
+    }
+
+    .list_item_project_100 {
+        margin-top: 60px !important;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+    }
+
+    .empty-project_100 {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        padding-top: 100%;
+        width: 100%;
+        background-color: initial;
+    }
+
+    .css-9k2q6r {
+        margin-top: 200px;
+        margin-bottom: 100px;
+        width: 80%;
+    }
+
+    .css-1kgz9v2 {
+        height: 100px;
+    }
+
+    .css-1pqiuo8 {
+        font-size: clamp(18px, 1vw, 20px);
+    }
+
+    .css-1hwlx6m {
+        font-size: 15px;
+    }
+
+    .links_project {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .link_hm h4 {
+        font-family: 'Mabry-Pro-Bold';
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-bottom: 5px;
+    }
+
+    .core_circle_2 {
+        height: 40px;
+        width: 40px;
+        top: -20px;
+    }
+
+    .second_layer_2 {
+        display: none;
+    }
+}
